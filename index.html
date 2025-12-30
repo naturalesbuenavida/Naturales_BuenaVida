@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Naturales Buenavida - Productos Saludables</title>
+  <title>Naturales Buenavida</title>
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(180deg, #eef7f1, #d8f0e2);
       min-height: 100vh;
       display: flex;
@@ -17,18 +17,15 @@
       align-items: center;
     }
 
-    /* ENCABEZADO */
+    /* HEADER */
     .header {
       width: 100%;
       text-align: center;
-      padding: 26px 12px 22px;
+      padding: 24px 12px 18px;
       background: #ffffffdd;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      backdrop-filter: blur(3px);
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
       border-bottom: 4px solid #d9f2de;
-      position: sticky;
-      top: 0;
-      z-index: 50;
     }
 
     .header h1 {
@@ -45,29 +42,12 @@
       font-weight: 500;
     }
 
-    /* WHATSAPP EN HEADER */
-    .whatsapp-header {
-      margin-top: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .whatsapp-header a {
-      text-decoration: none;
+    /* TELEFONOS TEXTO */
+    .phones {
+      margin-top: 10px;
+      font-size: 14px;
       color: #1f7a44;
-      font-weight: 700;
-      background: #e9fff2;
-      padding: 8px 14px;
-      border-radius: 20px;
-      border: 2px solid #25D366;
-      transition: background .2s ease, transform .2s ease;
-    }
-
-    .whatsapp-header a:hover {
-      background: #d6ffe6;
-      transform: translateY(-2px);
+      font-weight: 600;
     }
 
     /* HERO */
@@ -75,23 +55,21 @@
       position: relative;
       width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 50px 20px;
       overflow: hidden;
     }
 
-    /* LOGO DE FONDO MÁS VISIBLE */
+    /* LOGO FONDO COMPLETO */
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
       background-image: url('Logo2022Naturales.JPG');
-      background-position: center top;
       background-repeat: no-repeat;
-      background-size: 520px;
-      opacity: 0.35;
-      filter: saturate(1.15) contrast(1.05);
+      background-position: center top;
+      background-size: 600px;
+      opacity: 0.40;
       z-index: 0;
     }
 
@@ -99,57 +77,54 @@
       position: relative;
       z-index: 2;
       display: flex;
-      gap: 28px;
-      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 28px;
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255,255,255,0.72);
       border-radius: 22px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-      backdrop-filter: blur(3px);
-      flex-wrap: wrap;
+      box-shadow: 0 12px 30px rgba(0,0,0,.15);
+    }
+
+    .icon-block {
+      text-align: center;
     }
 
     .icon-btn {
-      display: inline-flex;
       width: 110px;
       height: 110px;
       border-radius: 50%;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(180deg,#fff,#eef6f1);
+      border: 6px solid rgba(47,110,67,.18);
+      box-shadow: 0 6px 20px rgba(0,0,0,.14);
       text-decoration: none;
-      transition: transform .18s ease, box-shadow .18s ease;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.14);
-      background: linear-gradient(180deg, #ffffff 0%, #eef6f1 100%);
-      border: 6px solid rgba(47,110,67,0.18);
+      transition: .2s;
     }
 
     .icon-btn:hover {
       transform: translateY(-6px);
-      box-shadow: 0 18px 35px rgba(0,0,0,0.22);
+      box-shadow: 0 18px 35px rgba(0,0,0,.22);
     }
 
     .icon-btn svg {
       width: 48px;
       height: 48px;
-      display: block;
     }
 
     .label {
       margin-top: 10px;
       font-size: 14px;
-      color: #2f4833;
-      text-align: center;
       font-weight: 700;
+      color: #2f4833;
     }
 
-    /* RESPONSIVE */
     @media (max-width:720px) {
-      .center-panel { gap: 16px; padding: 18px; }
-      .icon-btn { width: 88px; height: 88px; border-width:5px; }
+      .hero::before { background-size: 380px; }
+      .icon-btn { width: 88px; height: 88px; }
       .icon-btn svg { width: 36px; height: 36px; }
-      .label { font-size: 13px; }
-      .hero::before { background-size: 360px; opacity: 0.32; }
       .header h1 { font-size: 22px; }
       .header h2 { font-size: 13px; }
     }
@@ -158,63 +133,17 @@
 
 <body>
 
-  <!-- ENCABEZADO -->
+  <!-- HEADER -->
   <header class="header">
     <h1>Naturales Buenavida</h1>
-    <h2>Productos Saludables · Calidad Artesanal</h2>
+    <h2>Productos saludables · Calidad artesanal</h2>
 
-    <!-- WHATSAPP DEBAJO DEL TÍTULO -->
-    <div class="whatsapp-header">
-      <a href="https://wa.me/573127760650?text=Hola%20Naturales%20Buenavida%2C%20deseo%20información%20sobre%20sus%20productos."
-         target="_blank">📲 312 776 06 50</a>
-
-      <a href="https://wa.me/573102545975?text=Hola%20Naturales%20Buenavida%2C%20deseo%20información%20sobre%20sus%20productos."
-         target="_blank">📲 310 254 59 75</a>
+    <!-- NUMEROS SOLO TEXTO -->
+    <div class="phones">
+      📞 312 776 06 50 &nbsp;|&nbsp; 310 254 59 75
     </div>
   </header>
 
   <!-- ICONOS -->
   <main class="hero">
-    <div class="center-panel">
-
-      <!-- CATÁLOGO -->
-      <div style="text-align:center;">
-        <a class="icon-btn" href="https://naturalesbuenavida.my.canva.site/" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="#2E8B57" stroke-width="1.6" fill="#fff"/>
-            <path d="M8 12h8M12 8v8" stroke="#2E8B57" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
-        </a>
-        <div class="label">Catálogo</div>
-      </div>
-
-      <!-- FACEBOOK -->
-      <div style="text-align:center;">
-        <a class="icon-btn" href="https://www.facebook.com/naturales.buenavida" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M15 3h-3a4 4 0 0 0-4 4v3H6v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3V3z"
-                  stroke="#D2691E" stroke-width="1.6" fill="#fff"/>
-          </svg>
-        </a>
-        <div class="label">Facebook</div>
-      </div>
-
-      <!-- INSTAGRAM -->
-      <div style="text-align:center;">
-        <a class="icon-btn" href="https://www.instagram.com/natu_ralesbuenavida" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="3" width="18" height="18" rx="5"
-                  stroke="#D2691E" stroke-width="1.6"/>
-            <circle cx="12" cy="12" r="4"
-                    stroke="#D2691E" stroke-width="1.6"/>
-            <circle cx="17" cy="7" r="1" fill="#D2691E"/>
-          </svg>
-        </a>
-        <div class="label">Instagram</div>
-      </div>
-
-    </div>
-  </main>
-
-</body>
-</html>
+    <di
