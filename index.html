@@ -17,7 +17,7 @@
       align-items: center;
     }
 
-    /* Encabezado elegante */
+    /* Encabezado */
     .header {
       width: 100%;
       text-align: center;
@@ -45,7 +45,7 @@
       font-weight: 500;
     }
 
-    /* Hero principal */
+    /* Hero */
     .hero {
       position: relative;
       width: 100%;
@@ -56,7 +56,6 @@
       overflow: hidden;
     }
 
-    /* Fondo natural mejorado */
     .hero::before {
       content: "";
       position: absolute;
@@ -82,6 +81,7 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       backdrop-filter: blur(4px);
+      flex-wrap: wrap;
     }
 
     .icon-btn {
@@ -97,12 +97,17 @@
       background: linear-gradient(180deg, #ffffff 0%, #f3f7f4 100%);
       border: 6px solid rgba(47,110,67,0.12);
     }
+
     .icon-btn:hover {
       transform: translateY(-6px);
       box-shadow: 0 18px 35px rgba(0,0,0,0.18);
     }
 
-    .icon-btn svg { width: 48px; height: 48px; display: block; }
+    .icon-btn svg {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
 
     .label {
       margin-top: 10px;
@@ -112,9 +117,9 @@
       font-weight: 600;
     }
 
-    /* Para celular */
+    /* Responsive */
     @media (max-width:720px) {
-      .center-panel { gap: 16px; padding: 18px; flex-direction: column; }
+      .center-panel { gap: 16px; padding: 18px; }
       .icon-btn { width: 88px; height: 88px; border-width:5px; }
       .icon-btn svg { width: 36px; height: 36px; }
       .label { font-size: 13px; }
@@ -130,15 +135,35 @@
   <!-- ENCABEZADO -->
   <header class="header">
     <h1>Naturales Buenavida</h1>
-    <h2>Productos Saludables - Calidad Artesanal</h2>
-    <h3> 312 776 06 50 - 310 254 59 75</h3>
+    <h2>Productos Saludables · Calidad Artesanal</h2>
   </header>
 
-  <!-- HERO + ICONOS -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="hero">
     <div class="center-panel">
 
-      <!-- Cat�logo -->
+      <!-- WHATSAPP (PRIMERO) -->
+      <div style="text-align:center;">
+        <a class="icon-btn"
+           href="https://wa.me/573127760650?text=Hola%20Naturales%20Buenavida%2C%20deseo%20información%20sobre%20sus%20productos.%20También%20pueden%20contactarme%20al%20310%20254%2059%2075."
+           target="_blank"
+           rel="noopener noreferrer"
+           style="border-color: rgba(37,211,102,0.45);">
+
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M20 11.5a8.5 8.5 0 0 1-12.7 7.4L4 20l1.3-3.2A8.5 8.5 0 1 1 20 11.5z"
+                  stroke="#25D366" stroke-width="1.6" fill="#fff"/>
+            <path d="M9.5 9.5c.3-.6.6-.6.9-.6h.7c.2 0 .5.1.6.4l.8 1.9c.1.3.1.6 0 .8l-.4.6c-.1.2-.2.4 0 .6.3.6 1.3 1.6 2.7 2.1.2.1.5 0 .7-.2l.8-.9c.2-.2.4-.3.7-.2l1.9.8c.3.1.5.4.5.7 0 .8-.5 1.6-1.1 1.9-.7.4-1.6.4-2.2.2-2.2-.7-4.9-3.4-5.6-5.6-.2-.6-.2-1.5.2-2.2z"
+                  fill="#25D366"/>
+          </svg>
+        </a>
+        <div class="label">
+          WhatsApp Ventas<br>
+          <small>312 776 06 50 · 310 254 59 75</small>
+        </div>
+      </div>
+
+      <!-- CATÁLOGO -->
       <div style="text-align:center;">
         <a class="icon-btn" href="https://naturalesbuenavida.my.canva.site/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none">
@@ -146,25 +171,28 @@
             <path d="M8 12h8M12 8v8" stroke="#2E8B57" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </a>
-        <div class="label">Catalogo de Productos</div>
+        <div class="label">Catálogo de Productos</div>
       </div>
 
-      <!-- Facebook -->
+      <!-- FACEBOOK -->
       <div style="text-align:center;">
         <a class="icon-btn" href="https://www.facebook.com/naturales.buenavida" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none">
-            <path d="M15 3h-3a4 4 0 0 0-4 4v3H6v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3V3z" stroke="#D2691E" stroke-width="1.6" fill="#fff"/>
+            <path d="M15 3h-3a4 4 0 0 0-4 4v3H6v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3V3z"
+                  stroke="#D2691E" stroke-width="1.6" fill="#fff"/>
           </svg>
         </a>
         <div class="label">Facebook</div>
       </div>
 
-      <!-- Instagram -->
+      <!-- INSTAGRAM -->
       <div style="text-align:center;">
         <a class="icon-btn" href="https://www.instagram.com/natu_ralesbuenavida" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="#D2691E" stroke-width="1.6"/>
-            <circle cx="12" cy="12" r="4" stroke="#D2691E" stroke-width="1.6"/>
+            <rect x="3" y="3" width="18" height="18" rx="5"
+                  stroke="#D2691E" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="4"
+                    stroke="#D2691E" stroke-width="1.6"/>
             <circle cx="17" cy="7" r="1" fill="#D2691E"/>
           </svg>
         </a>
